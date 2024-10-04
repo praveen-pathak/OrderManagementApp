@@ -1,9 +1,0 @@
-<!-- dependencies -->
-
-bin
-obj
-
-<!-- production -->
-
-build
-wwwroot

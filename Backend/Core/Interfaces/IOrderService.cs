@@ -6,4 +6,4 @@ namespace Core.Interfaces
     {
         IQueryable<Order> GetOrders();
     }
-}
+}                                                                                                   

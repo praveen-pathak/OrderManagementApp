@@ -13,7 +13,7 @@ namespace Infrastructure.Data
 
         public DbSet<Address> Addresses { get; set; }
 
-        public OMAContext(DbContextOptions options) : base(options)
+        public OMAContext(DbContextOptions<OMAContext> options) : base(options)
         {
         }
 
