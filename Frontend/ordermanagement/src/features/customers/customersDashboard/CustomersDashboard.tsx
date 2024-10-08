@@ -8,17 +8,18 @@ import {
 import { Grid, Typography } from "@mui/material";
 //import Typography from "@mui/material/Typography";
 import CustomerList from "./CustomerList";
+import OmLoading from "../../../components/elements/OmLoading";
+import OmAlert from "../../../components/elements/OmAlert";
 
 export default function CustomersDashboard() {
   const { data: customersData, loading, error } = useGetCustomersQuery();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <OmLoading />;
   }
 
   if (error || !customersData) {
-    console.log(customersData);
-    return <div>Error...</div>;
+    return <OmAlert message={"Could not load customers data"} />;
   }
   const customers = customersData.customers as Customer[];
   return (
