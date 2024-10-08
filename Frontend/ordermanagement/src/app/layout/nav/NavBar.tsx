@@ -1,7 +1,7 @@
 import React from "react";
-import {AppBar, Box, Button, Toolbar, Typography} from "@mui/material";
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { Container } from "@mui/system";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <AppBar position="static">
@@ -22,11 +22,20 @@ export default function NavBar() {
           >
             <Link to="/">Order Management App</Link>
           </Typography>
-          <Box sx={{flexGrow:1, display: {xs:'none', md:'flex'}}}>
-            <Button 
-            key="Customers"
-            sx={{my:2, color: 'white', display:'block'}}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Button
+              key="Customers"
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
               <Link to="/customers">Customers</Link>
+            </Button>
+          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Button
+              key="Orders"
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              <Link to="/orders">Orders</Link>
             </Button>
           </Box>
         </Toolbar>
