@@ -3504,6 +3504,18 @@ adjust-sourcemap-loader@^4.0.0:
     loader-utils "^2.0.0"
     regex-parser "^2.2.11"
 
+ag-grid-community@^28.2.0:
+  version "28.2.1"
+  resolved "https://registry.npmjs.org/ag-grid-community/-/ag-grid-community-28.2.1.tgz#50778cb2254ee79497222781909d8364007dd91e"
+  integrity sha512-DMZh/xD/FqYP17qJ1M92PolTYe+hrKuEaf+A4h13O6qn2x/xZQrTRGW5DgnQLR/uLMe1XXZQPKR3UKgAlKo69A==
+
+ag-grid-react@^28.2.0:
+  version "28.2.1"
+  resolved "https://registry.npmjs.org/ag-grid-react/-/ag-grid-react-28.2.1.tgz#c38585b8f165a5cf9343eab6994c06855f5b2caf"
+  integrity sha512-3vbw+B77uWwAyiOJxQA5U+PQFRCCccUx7L5PIwrnA4Y7c1yAu8sB65hAZdBc9kuW26iltwv7asq0UzP7UAQUpg==
+  dependencies:
+    prop-types "^15.8.1"
+
 agent-base@6:
   version "6.0.2"
   resolved "https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz"
@@ -8614,6 +8626,7 @@ ora@^5.4.1:
   dependencies:
     "@apollo/client" "^3.7.2"
     "@emotion/react" "^11.10.4"
+    "@emotion/styled" "^11.10.4"
     "@graphql-codegen/typescript" "^2.8.5"
     "@graphql-codegen/typescript-operations" "^2.5.10"
     "@graphql-codegen/typescript-react-apollo" "^3.3.7"
@@ -8628,9 +8641,10 @@ ora@^5.4.1:
     "@types/node" "^16.18.112"
     "@types/react" "^18.3.11"
     "@types/react-dom" "^18.3.0"
+    ag-grid-react "^28.2.0"
     cors "^2.8.5"
     graphql "^16.6.0"
-    ordermanagement "file:../../../../../AppData/Local/Yarn/Cache/v6/npm-ordermanagement-0.1.0-eafc9343-af71-4b7b-a78d-48ae2febd6dd-1728293241400/node_modules/ordermanagement"
+    ordermanagement "file:../../../../../AppData/Local/Yarn/Cache/v6/npm-ordermanagement-0.1.0-f26de46c-2d87-4c18-aaec-ae332ded9cff-1728302613573/node_modules/ordermanagement"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-router-dom "6.4.2"
