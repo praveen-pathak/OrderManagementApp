@@ -6,6 +6,7 @@ import {
   FormGroup,
   FormLabel,
 } from "@mui/material";
+import configCheckBox from "@mui/icons-material";
 import { CheckBox } from "@material-ui/icons";
 
 interface OmCheckBoxProps {
