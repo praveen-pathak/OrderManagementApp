@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Customer, Address } from "../../../graphql/generated/schema";
 import OmGrid from "../../../components/elements/OmGrid";
-
+import { IconButton } from "@mui/material";
+import LaunchIcon from "@mui/icons-material/Launch";
 interface CustomerListProps {
   customers: Customer[];
 }
@@ -12,6 +13,15 @@ export default function CustomerList({ customers }: CustomerListProps) {
       field: "id",
       width: 50,
       suppressSizeToFit: true,
+      cellRenderer: function (params: any) {
+        return (
+          <IconButton
+            onClick={() => window.open(`/cutomers/${params.value}`, "_black")}
+          >
+            <LaunchIcon fontSize="small" color="secondary" />
+          </IconButton>
+        );
+      },
     },
     { field: "firstName" },
     { field: "lastName" },
