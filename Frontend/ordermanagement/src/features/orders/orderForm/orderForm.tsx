@@ -11,6 +11,7 @@ import OmSelect from "../../../components/FormsUI/OmSelect";
 import OmSubmitButton from "../../../components/FormsUI/OmSubmitButton";
 import OmDatePicker from "../../../components/FormsUI/OmDatePicker";
 import OmCheckBox from "../../../components/FormsUI/OmCheckBox";
+import statuses from "../../../data/statuses.json";
 
 interface orderFormProps {
   order: Order;
@@ -22,6 +23,8 @@ const FORM_VALIDATION = yup.object().shape({
   depositAmount: yup.number().required("Deposit amount is required"),
   otherNotes: yup.string(),
   totalAmount: yup.number().required("Total amount is required"),
+  isDelivery: yup.boolean(),
+  status: yup.string(),
 });
 
 export default function orderForm({ order }: orderFormProps) {
@@ -58,7 +61,7 @@ export default function orderForm({ order }: orderFormProps) {
                 <OmSelect
                   name="status"
                   otherProps={{ label: "Order Status" }}
-                  options={Status}
+                  options={statuses}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -76,7 +79,11 @@ export default function orderForm({ order }: orderFormProps) {
               <Grid item xs={12}>
                 <OmTextField
                   name="otherNotes"
-                  otherProps={{ label: "Other Notes" }}
+                  otherProps={{
+                    label: "Other Notes",
+                    multiline: true,
+                    rows: 4,
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -96,7 +103,7 @@ export default function orderForm({ order }: orderFormProps) {
               </Grid>
               <Grid item xs={12}>
                 <OmCheckBox
-                  name="delivery"
+                  name="isDelivery"
                   legend="Include Delivery"
                   label="Include Delivery"
                   otherProps={{ label: "Delivery Included" }}
