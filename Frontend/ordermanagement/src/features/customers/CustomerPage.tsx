@@ -8,7 +8,7 @@ import {
 import OmLoading from "../../components/elements/OmLoading";
 import OmAlert from "../../components/elements/OmAlert";
 import { Container } from "@mui/system";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { AgGridReact } from "ag-grid-react";
 import CustomerForm from "./customerForms/CustomerForm";
 import OmHeader from "../../components/elements/OmHeader";
@@ -56,6 +56,15 @@ export default function CustomerPage() {
         </Grid>
         <Grid item xs={12}>
           <OrderList orders={customerOrders} />
+        </Grid>
+        <Grid item xs={12}>
+          <Button
+            variant="contained"
+            fullWidth={true}
+            href={`/customers/${customer.id}/neworder`}
+          >
+            Add New Order
+          </Button>
         </Grid>
       </Grid>
     </Container>
