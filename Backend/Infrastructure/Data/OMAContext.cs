@@ -31,7 +31,7 @@ namespace Infrastructure.Data
              },
              new Customer
              {
-                 Id = 1,
+                 Id = 2,
                  FirstName = "Monty",
                  LastName = "Python",
                  ContactNumber = "1235456789",
