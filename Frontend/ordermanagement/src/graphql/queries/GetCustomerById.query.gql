@@ -1,4 +1,4 @@
-query GetCustomerById($id: Int!) {
+query GetCustomerByIdFromCustomer($id: Int!) {
   customers(where: { id: { eq: $id } }) {
     id
     firstName

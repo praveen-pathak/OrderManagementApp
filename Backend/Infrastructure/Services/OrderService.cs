@@ -50,7 +50,7 @@ namespace Infrastructure.Services
                     Description = orderModel.Description,
                     TotalAmount = orderModel.TotalAmount,
                     DepositAmount = orderModel.DepositAmount,
-                    IsDeleted = orderModel.IsDelivery,
+                    IsDelivery = orderModel.IsDelivery,
                     Status = orderModel.Status,
                     OtherNotes = orderModel.OtherNotes
 
@@ -72,7 +72,7 @@ namespace Infrastructure.Services
                 order.Description = orderModel.Description;
                 order.TotalAmount = orderModel.TotalAmount;
                 order.DepositAmount = orderModel.DepositAmount;
-                order.IsDeleted = orderModel.IsDelivery;
+                order.IsDelivery = orderModel.IsDelivery;
                 order.Status = orderModel.Status;
                 order.OtherNotes = orderModel.OtherNotes;
 
